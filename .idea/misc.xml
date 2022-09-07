@@ -13,8 +13,15 @@
         <entry key="..\:/project/App/Android/Android_kotlin/project_1_food/app/src/main/res/drawable/search_background.xml" value="0.2155" />
         <entry key="..\:/project/App/Android/Android_kotlin/project_1_food/app/src/main/res/layout-v27/activity_main.xml" value="0.4" />
         <entry key="..\:/project/App/Android/Android_kotlin/project_1_food/app/src/main/res/layout/activity_main.xml" value="0.41486603284356094" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable-ldpi/cat_background2.xml" value="0.1905" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background.xml" value="0.1905" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background2.xml" value="0.1905" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background3.xml" value="0.1905" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background4.xml" value="0.1905" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background5.xml" value="0.1905" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_intro.xml" value="0.25" />
-        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_main.xml" value="0.2222222222222222" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_main.xml" value="0.20512820512820512" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/viewholder_category.xml" value="0.4" />
       </map>
     </option>
   </component>
