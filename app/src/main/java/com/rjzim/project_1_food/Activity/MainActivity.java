@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rjzim.project_1_food.Adaptor.CategoryAdaptor;
 import com.rjzim.project_1_food.Adaptor.PopularAdaptor;
 import com.rjzim.project_1_food.Domain.CategoryDomain;
@@ -25,6 +29,26 @@ public class MainActivity extends AppCompatActivity {
         
         recyclerViewCategory();
         recyclerViewPopular();
+        bottomNavigation();
+    }
+
+    private void bottomNavigation(){
+        FloatingActionButton floatingActionButton=findViewById(R.id.cartBtn);
+        LinearLayout homeBtn=findViewById(R.id.homeBtn1);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,CartListActivity.class));
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
+            }
+        });
     }
 
     private void recyclerViewCategory() {
@@ -50,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<FoodDomain>foodList=new ArrayList<>();
         //foodList.add(new FoodDomain("Peporoni Pizza","pop_1","slices peporoni, mozerella cheese, fresh oregano, ground black paper, pizza sauce",9.70));
-        foodList.add(new FoodDomain("Peporoni Pizza","pop_1" , 9.70));
-        foodList.add(new FoodDomain("Cheese Burger","pop_2",8.96));
-        foodList.add(new FoodDomain("Vegetable Pizza","pop_3",7.65));
+        foodList.add(new FoodDomain("Peporoni Pizza","pop_1" , "slices peporoni, mozerella cheese, fresh oregano, ground black paper, pizza sauce",9.70));
+        foodList.add(new FoodDomain("Cheese Burger","pop_2","slices peporoni, mozerella cheese, fresh oregano, ground black paper, pizza sauce",8.96));
+        foodList.add(new FoodDomain("Vegetable Pizza","pop_3","slices peporoni, mozerella cheese, fresh oregano, ground black paper, pizza sauce",7.65));
 
         adapter2=new PopularAdaptor(foodList);
         recyclerViewPopularList.setAdapter(adapter2);

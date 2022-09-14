@@ -1,25 +1,27 @@
 package com.rjzim.project_1_food.Domain;
 
-public class FoodDomain {
+import java.io.Serializable;
+
+public class FoodDomain implements Serializable {
     private String title;
     private String pic;
-    //private String description;
+    private String description;
     private double fee;
     private int numberInCart;
 
-    //public FoodDomain(String title, String pic, String description, double fee) {
-    public FoodDomain(String title, String pic, double fee) {
+    public FoodDomain(String title, String pic, String description, double fee) {
+    //public FoodDomain(String title, String pic, double fee) {
         this.title = title;
         this.pic = pic;
-        //this.description = description;
+        this.description = description;
         this.fee = fee;
     }
 
-    //public FoodDomain(String title, String pic, String description, double fee, int numberInCart) {
-    public FoodDomain(String title, String pic, double fee, int numberInCart) {
+    public FoodDomain(String title, String pic, String description, Double fee, int numberInCart) {
+    //public FoodDomain(String title, String pic, double fee, int numberInCart) {
         this.title = title;
         this.pic = pic;
-        //this.description = description;
+        this.description = description;
         this.fee = fee;
         this.numberInCart = numberInCart;
     }
@@ -39,7 +41,7 @@ public class FoodDomain {
     public void setPic(String pic) {
         this.pic = pic;
     }
-/*
+
     public String getDescription() {
         return description;
     }
@@ -47,7 +49,7 @@ public class FoodDomain {
     public void setDescription(String description) {
         this.description = description;
     }
-*/
+
     public double getFee() {
         return fee;
     }
@@ -63,6 +65,8 @@ public class FoodDomain {
     public void setNumberInCart(int numberInCart) {
         this.numberInCart = numberInCart;
     }
+
+
 }
 
 

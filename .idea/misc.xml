@@ -21,10 +21,12 @@
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background4.xml" value="0.1905" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/cat_background5.xml" value="0.1905" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/drawable/viewholder_popular.xml" value="0.1" />
-        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_another.xml" value="0.20512820512820512" />
-        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_detail.xml" value="0.264" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_another.xml" value="0.2" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_cart_list.xml" value="0.2" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_intro.xml" value="0.25" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/viewholder_cart.xml" value="0.264" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/viewholder_category.xml" value="0.2" />
         <entry key="..\:/project/App/Android/Java/f/app/src/main/res/layout/viewholder_popular.xml" value="0.536" />
       </map>

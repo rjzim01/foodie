@@ -1,5 +1,6 @@
 package com.rjzim.project_1_food.Adaptor;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,12 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.rjzim.project_1_food.Domain.CategoryDomain;
+import com.rjzim.project_1_food.Activity.DetailActivity;
 import com.rjzim.project_1_food.Domain.FoodDomain;
 import com.rjzim.project_1_food.R;
 
@@ -20,10 +19,12 @@ import java.util.ArrayList;
 
 public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHolder> {
 
-    ArrayList<FoodDomain>categoryFood;
+    ArrayList<FoodDomain>popularFood;
+    private ViewHolder holder;
+    private int position1;
 
-    public PopularAdaptor(ArrayList<FoodDomain> categoryFood) {
-        this.categoryFood = categoryFood;
+    public PopularAdaptor(ArrayList<FoodDomain> popularFood) {
+        this.popularFood = popularFood;
     }
 
     @Override
@@ -33,21 +34,32 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.title.setText(categoryFood.get(position).getTitle());
-        holder.fee.setText(String.valueOf(categoryFood.get(position).getFee()));
+    public void onBindViewHolder(@NonNull PopularAdaptor.ViewHolder holder,int position1) {
 
 
+        holder.title.setText(popularFood.get(position1).getTitle());
+        holder.fee.setText(String.valueOf(popularFood.get(position1).getFee()));
 
-        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(categoryFood.get(position).getPic(), "drawable",holder.itemView.getContext().getPackageName());
+
+        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(popularFood.get(position1).getPic(), "drawable",holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.pic);
+
+        holder.addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("object", popularFood.get(position1));
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
+
     }
 
     @Override
     public int getItemCount() {
-        return categoryFood.size();
+        return popularFood.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
